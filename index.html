@@ -35,7 +35,6 @@
   .hero{
     background:linear-gradient(180deg, var(--navy-deep) 0%, var(--navy) 100%);
     padding:64px 24px 0;
-    margin-bottom:70px;
   }
   .hero-inner{
     max-width:760px;
@@ -70,31 +69,32 @@
     margin-bottom:34px;
   }
 
-  .kpi-row{
+  .stat-row{
     display:flex;
-    gap:14px;
     flex-wrap:wrap;
-    transform:translateY(28px);
+    row-gap:24px;
+    padding-top:8px;
+    padding-bottom:56px;
   }
-  .kpi-card{
-    flex:1 1 160px;
-    background:var(--paper);
-    border-top:3px solid var(--gold);
-    border-radius:3px;
-    padding:18px 18px 16px;
-    box-shadow:0 12px 24px rgba(13,23,48,0.28);
+  .stat{
+    padding:0 32px 0 0;
+    margin-right:32px;
+    min-width:150px;
+    border-right:1px solid rgba(228,206,138,0.28);
   }
-  .kpi-number{
+  .stat:last-child{ border-right:none; margin-right:0; padding-right:0; }
+  .stat-number{
     font-family:'Newsreader', serif;
-    font-size:26px;
+    font-size:24px;
     font-weight:600;
-    color:var(--navy);
-    line-height:1.1;
-    margin-bottom:4px;
+    color:var(--gold-soft);
+    line-height:1.25;
+    margin-bottom:6px;
   }
-  .kpi-label{
+  .stat-label{
     font-size:12.5px;
-    color:#6B6F78;
+    color:#9CA3B4;
+    max-width:150px;
   }
 
   .contact{
@@ -198,8 +198,8 @@
   @media (max-width:600px){
     .hero{ padding:48px 20px 0; }
     h1{ font-size:36px; }
-    .kpi-row{ transform:translateY(20px); }
-    .kpi-card{ flex:1 1 130px; }
+    .stat-row{ gap:20px 0; }
+    .stat{ flex:1 1 45%; border-right:none; margin-right:0; padding-right:0; }
     .wrap{ padding:0 20px 40px; }
     .skill-group{ flex-direction:column; gap:4px; }
     .skill-label{ flex:none; }
@@ -210,22 +210,22 @@
 
   <div class="hero">
     <div class="hero-inner">
-      <div class="eyebrow">DATA ANALYST · ACCOUNTING BACKGROUND</div>
-      <h1>Aya Ahmed Elshenawy builds dashboards <em>finance teams trust.</em></h1>
-      <p class="role">I turn raw financial and operational data into dashboards and KPIs that hold up under scrutiny — grounded in real accounting experience, not just tool knowledge.</p>
+      <div class="eyebrow">DATA ANALYST · BUSINESS & FINANCIAL FOUNDATION</div>
+      <h1>Aya Ahmed Elshenawy turns numbers into <em>decisions you can act on.</em></h1>
+      <p class="role">I bring a real background in accounting and business operations to every dataset — so the dashboards I build don't just look right, they mean something.</p>
 
-      <div class="kpi-row">
-        <div class="kpi-card">
-          <div class="kpi-number">3+ Yrs</div>
-          <div class="kpi-label">Finance & Accounting Experience</div>
+      <div class="stat-row">
+        <div class="stat">
+          <div class="stat-number">3+ Yrs</div>
+          <div class="stat-label">Business & Operations Experience</div>
         </div>
-        <div class="kpi-card">
-          <div class="kpi-number">6</div>
-          <div class="kpi-label">Finance & Banking Internships</div>
+        <div class="stat">
+          <div class="stat-number">6</div>
+          <div class="stat-label">Professional Internships</div>
         </div>
-        <div class="kpi-card">
-          <div class="kpi-number">Power BI · SQL · DAX</div>
-          <div class="kpi-label">Core Analytics Toolkit</div>
+        <div class="stat">
+          <div class="stat-number">Power BI · SQL · DAX</div>
+          <div class="stat-label">Core Analytics Toolkit</div>
         </div>
       </div>
     </div>
